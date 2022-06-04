@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSurface"
+    android:orientation="vertical" >
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/msb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="8dp"
+        app:mt_backIconTint="@color/colorPrimary"
+        app:mt_backIconUseTint="true"
+        app:mt_clearIconTint="@color/colorPrimary"
+        app:mt_clearIconUseTint="true"
+        app:mt_dividerColor="@color/colorOnSurface"
+        app:mt_maxSuggestionsCount="10"
+        app:mt_navIconEnabled="false"
+        app:mt_placeholder="@string/app_name"
+        app:mt_placeholderColor="@color/colorOnSurface"
+        app:mt_searchBarColor="@color/colorSurface"
+        app:mt_searchIconTint="@color/colorPrimary"
+        app:mt_searchIconUseTint="true"
+        app:mt_textColor="@color/colorOnSurface" />
+
+    <include
+        android:id="@+id/shimmer"
+        layout="@layout/shimmer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+        android:id="@+id/hicvp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:icvp_center_page_scale_offset="32dp"
+        app:icvp_max_page_scale="0.85"
+        app:icvp_medium_scaled="false"
+        app:icvp_min_page_scale="0.65"
+        app:icvp_min_page_scale_offset="16dp"
+        app:icvp_scroll_duration="2500" />
+
+    <TextView
+        android:id="@+id/tv_latest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="26dp"
+        android:text="Latest News"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
+
+</LinearLayout>
