@@ -1,13 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="otang.news"
-    android:versionCode="1"
-    android:versionName="1.0" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-sdk
-        android:minSdkVersion="26"
-        android:targetSdkVersion="31" />
 
     <application
         android:name=".ui.Applications"
@@ -17,10 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
-        android:usesCleartextTraffic="true" >
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".ui.activity.HomeActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,15 +21,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.ReadActivity" />
-        <activity
-            android:name=".crash.activity.DefaultErrorActivity"
-            android:process=":error_activity" />
-
-        <provider
-            android:name=".crash.provider.CrashInitProvider"
-            android:authorities="otang.news.crashinitprovider"
-            android:exported="false"
-            android:initOrder="101" />
     </application>
 
 </manifest>

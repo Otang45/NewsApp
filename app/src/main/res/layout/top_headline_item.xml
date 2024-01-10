@@ -1,25 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/colorOnSurfaceInverse"
+        app:cardBackgroundColor="?attr/colorOnSurfaceInverse"
         app:cardCornerRadius="25dp"
-        app:cardElevation="4dp" >
+        app:cardElevation="4dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/iv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:importantForAccessibility="no"
                 android:scaleType="centerCrop" />
 
             <LinearLayout
@@ -27,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/news_background"
                 android:orientation="vertical"
-                android:padding="16dp" >
+                android:padding="16dp">
 
                 <TextView
                     android:id="@+id/tv_source"
@@ -35,7 +37,7 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/source_background"
                     android:padding="5dp"
-                    android:textColor="@color/colorOnPrimary"
+                    android:textColor="?attr/colorOnPrimary"
                     android:textSize="12sp" />
 
                 <View
@@ -48,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorPrimaryContainer"
+                    android:textColor="?attr/colorPrimaryContainer"
                     android:textSize="18sp" />
 
                 <TextView
@@ -64,13 +66,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables">
 
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/clock"
-						android:tint="@android:color/white" />
+                        app:tint="@android:color/white" />
 
                     <TextView
                         android:id="@+id/tv_time"

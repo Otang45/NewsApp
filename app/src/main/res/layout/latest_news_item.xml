@@ -1,36 +1,38 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="2dp"
-        app:cardBackgroundColor="@color/colorOnSurfaceInverse"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="?attr/colorOnSurfaceInverse"
         app:cardCornerRadius="25dp"
-        app:cardElevation="2dp" >
+        app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_margin="8dp"
                 app:cardCornerRadius="23dp"
-                app:cardElevation="0dp" >
+                app:cardElevation="0dp">
 
                 <ImageView
                     android:id="@+id/iv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
                     android:scaleType="centerCrop" />
             </androidx.cardview.widget.CardView>
 
@@ -38,7 +40,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:padding="8dp" >
+                android:padding="8dp">
 
                 <View
                     android:layout_width="match_parent"
@@ -50,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="?attr/colorPrimary"
                     android:textSize="18sp" />
 
                 <TextView
@@ -59,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:maxLines="3"
-                    android:textColor="@color/colorOnSurface"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="12sp" />
 
                 <LinearLayout
@@ -67,20 +69,21 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/clock"
-                        android:tint="@color/colorOnSurface" />
+                        app:tint="?attr/colorOnSurface" />
 
                     <TextView
                         android:id="@+id/tv_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
-                        android:textColor="@color/colorOnSurface"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="12sp" />
 
                     <TextView
@@ -90,8 +93,9 @@
                         android:layout_marginStart="8dp"
                         android:background="@drawable/source_background"
                         android:padding="3dp"
-                        android:textColor="@color/colorOnPrimary"
-                        android:textSize="8sp" />
+                        android:textColor="?attr/colorOnPrimary"
+                        android:textSize="8sp"
+                        tools:ignore="SmallSp" />
                 </LinearLayout>
 
                 <View

@@ -3,19 +3,19 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:cardCornerRadius="10dp"
-    app:cardElevation="0dp" >
+    app:cardElevation="0dp">
 
     <RelativeLayout
         android:id="@+id/rl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true" >
+        android:layout_centerInParent="true">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0.8"
-            android:background="@drawable/source_background" >
+            android:background="@drawable/source_background">
 
             <TextView
                 android:id="@+id/tv_bottom"
@@ -35,7 +35,7 @@
             android:layout_centerInParent="true"
             android:layout_margin="10dp"
             android:textAllCaps="true"
-            android:textColor="@color/colorOnPrimary"
+            android:textColor="?attr/colorOnPrimary"
             android:textSize="12sp"
             android:visibility="visible" />
 
@@ -44,6 +44,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_centerInParent="true"
+            android:importantForAccessibility="no"
             android:src="@drawable/check"
             android:visibility="gone" />
     </RelativeLayout>

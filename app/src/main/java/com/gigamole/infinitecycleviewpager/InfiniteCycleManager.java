@@ -23,7 +23,7 @@ import static androidx.viewpager.widget.ViewPager.PageTransformer;
 import static androidx.viewpager.widget.ViewPager.VISIBLE;
 import static android.view.View.OVER_SCROLL_NEVER;
 import static com.gigamole.infinitecycleviewpager.InfiniteCyclePagerAdapter.OnNotifyDataSetChangedListener;
-import otang.news.R;
+import otang.app.news.R;
 
 /**
  * Created by GIGAMOLE on 7/27/16.
